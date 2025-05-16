@@ -13,7 +13,7 @@ This extension provides a custom CUDA memory allocator for PyTorch that intercep
 - Comprehensive memory statistics reporting
 
 ## Installation
-On Lightning AI (https://lightning.ai/) using T4 GPU studio environment.
+This project was built and tested on Lightning AI’s T4 GPU Studio environment [Lightning AI](https://lightning.ai/).
 ```bash
 python setup.py install
 ```
@@ -60,7 +60,7 @@ export OOM_MAX_RETRIES=5
 export OOM_SIZE_FACTOR=0.8
 export OOM_DELAY_MS=100
 export OOM_VERBOSE=1
-python your_script.py
+python test.py
 ```
 
 ## API Reference
