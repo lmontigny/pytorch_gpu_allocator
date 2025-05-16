@@ -1,0 +1,49 @@
+[OOM] Allocator created
+[OOM] Creating tensor with 1965957120 elements
+[OOM] Allocator created
+[OOM] Creating tensor with 3142175948 elements
+[OOM] Creating tensor with 1963859968 elements
+[OOM] Tensor retry with 1374701977 elements
+[OOM] Tensor retry with 962291384 elements
+[OOM] Tensor retry with 673603969 elements
+Testing Custom CUDA Allocator with OOM Handling
+
+=== GPU Information ===
+Device: Tesla T4 (14.75 GB)
+Memory: 0.10 GB used / 14.75 GB total
+
+=== Testing Normal Allocation ===
+Allocating 7.32 GB tensor...
+Success! Tensor shape: torch.Size([1965957120])
+Tensor is usable (first value: 1.0)
+
+=== Testing Raw Memory Allocation ===
+Allocating 4.39 GB of raw memory...
+Success! Raw memory allocated at <capsule object NULL at 0x7fbb76343c90>
+Memory successfully deallocated
+Cache cleared
+
+=== Testing OOM Handling ===
+1. Filling 11.71 GB of memory...
+
+2. Attempting oversized allocation (should trigger OOM)...
+
+OOM handling succeeded!
+- Requested: 7.32 GB
+- Allocated: 2.51 GB (65.7% reduction)
+- Time with backoff: 1.40 seconds
+Total retries: 2
+
+=== Test Results ===
+Normal allocation: ✅ PASS
+Raw memory allocation: ✅ PASS
+OOM handling: ✅ PASS
+Post-OOM allocation: ✅ PASS
+
+Overall: ✅ PASS
+
+=== Final Memory State ===
+
+=== GPU Information ===
+Device: Tesla T4 (14.75 GB)
+Memory: 0.14 GB used / 14.75 GB total
