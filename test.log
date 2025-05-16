@@ -19,7 +19,7 @@ Tensor is usable (first value: 1.0)
 
 === Testing Raw Memory Allocation ===
 Allocating 4.39 GB of raw memory...
-Success! Raw memory allocated at <capsule object NULL at 0x7fbb76343c90>
+Success! Raw memory allocated at <capsule object NULL at 0x7ff0ae783780>
 Memory successfully deallocated
 Cache cleared
 
