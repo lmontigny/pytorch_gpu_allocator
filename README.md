@@ -13,7 +13,7 @@ This extension provides a custom CUDA memory allocator for PyTorch that intercep
 - Comprehensive memory statistics reporting
 
 ## Installation
-
+On Lightning AI (https://lightning.ai/) using T4 GPU studio environment.
 ```bash
 python setup.py install
 ```
@@ -107,4 +107,4 @@ The test script verifies:
 
 ## License
 
-MIT
+BSD
